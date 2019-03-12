@@ -51,7 +51,7 @@ def add_two(number):
 add_two(4)
 
 
-'''
+
 def cap_first_letter(sentence)
     table = [sentence.split('')]
     for idx in range(len(table))
