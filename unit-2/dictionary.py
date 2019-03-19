@@ -100,6 +100,7 @@ def frequency_generator(a_string):
    #returns the number of times each word
    # appears i a string
    for x in len(a_string):
+       pass
 
 
 #my_sentence = 'There is a man with a plan. The man has a plan in hand'
