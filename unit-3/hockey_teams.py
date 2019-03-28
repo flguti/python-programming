@@ -16,7 +16,7 @@ class HockeyTeam:
         pass
     
     def __repr__(self):
-        return ''
+        return '| Team: ' + self.name + 'Division: ' + self.division + 'Conference: ' + self.conference + '|'
 
 def print_menu():
    print("1. Create hockey team")
@@ -35,7 +35,7 @@ def main():
             name, division, conference = input('please enter Team name, division and Conference (separeted by come)  :').split(',')
             team = HockeyTeam(name, division, conference)
             hockey_teams.append(team)
-            #print(hockey_teams)
+            print(hockey_teams)
         elif n == '2':
             name, pos, num = input('Enter player\'s name, position, number (comma separated)  :').split(',')
             player = {}
@@ -45,15 +45,18 @@ def main():
             team_name = input('Enter team name to add player to:  ')
 
             for idx, team in enumerate(hockey_teams):
-                # try:
-                    if team['name'] == team_name:
-                        hockey_teams[idx].add_player(player)
-                # except ValueError:
-                #     print('Team does not exist')
+                if team['name'] == team_name:
+                    hockey_teams[idx].add_player(player)
         if n == '3':
-            HockeyTeam.remove_player()
+            name, team = input('Enter player\'s name, team name to be removed (comma separated)  :').split(',')
+            for idx, team in enumerate(hockey_teams):
+                if team['name'] == team_name:
+                    for idx, team in enumerate(hockey_teams):
+                        if team['name'] == team_name:
+                            hockey_teams[idx].add_player(player)
+            HockeyTeam.remove_player(1, 2)
         if n == '4':
-            HockeyTeam.get_roster()
+            HockeyTeam.get_roster(1)
         #if n != '1' and n != '2' and n != '3' and n != 'q':
         #    print('Wrong value, read carefully the menu')
     
